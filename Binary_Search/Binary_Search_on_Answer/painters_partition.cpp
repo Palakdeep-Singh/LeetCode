@@ -32,14 +32,14 @@ long long binary_search(vector<int> &arr, int k)
   long long low = *max_element(arr.begin(), arr.end());
   long long high = accumulate(arr.begin(), arr.end(), 0);
 
-  while (low < high)
+  while (low <= high)
   {
 
     long long mid = low + (high - low) / 2;
 
     if (condition(arr, mid) <= k)
     {
-      high = mid;
+      high = mid - 1;
     }
     else
     {
@@ -47,13 +47,13 @@ long long binary_search(vector<int> &arr, int k)
     }
   }
 
-  return high;
+  return low;
 }
 
 int main()
 {
 
-  vector<int> arr = {10, 20, 20, 340, 460, 600};
+  vector<int> arr = {1, 2, 3, 4, 5};
   int k = 3;
 
   cout << binary_search(arr, k) << endl;
