@@ -1,50 +1,96 @@
-<p align="center"><h1> 🚀 Competitive Programming Templates</h1></p>
+<p align="center"><h1>  DSA Bootcamp</h1></p>
 
-A curated collection of C++ templates designed to boost speed, reduce boilerplate, and provide ready-to-use snippets for competitive programming contests.
+A comprehensive collection of Data Structures and Algorithms (DSA) implementations in C++ for learning and mastering core algorithmic concepts.
 
+---
 
-## **📌 Why This Repo?**
-Competitive programming is all about speed + accuracy. Writing the same utility functions repeatedly wastes precious time. This repo solves that by providing:
-- Pre-written templates for common algorithms and data structures.
-- Fast I/O setups to handle large inputs efficiently.
-- Debugging helpers to quickly trace logic errors.
-- Modular code snippets for reuse across problems.
+## **About**
 
+This repository contains implementations of fundamental data structure and algorithm problems, organized by topic. Each section includes multiple problem solutions with different approaches and optimizations.
 
-## **⚡ Features (ASAP)**
-- **Fast I/O:** Optimized input/output routines for handling big test cases.
-- **Macros & Shortcuts:** Reduce typing overhead with clean, reusable macros.
-- **Data Structures:** Templates for segment trees, Fenwick trees, DSU, heaps, etc.
-- **Graph Algorithms:** BFS, DFS, Dijkstra, Bellman-Ford, Floyd-Warshall, etc.
-- **Math Utilities:** Modular arithmetic, prime sieves, combinatorics, matrix exponentiation.
-- **String Algorithms:** KMP, Z-function, rolling hash, suffix arrays.
-- **Debugging Tools:** Handy debug macros for tracing variables during contests.
+---
 
-## **🛠️ Usage**
- 1. Clone the repo: 
- ```bash
-git clone https://github.com/Palakdeep-Singh/CP_TEMPLATES.git
-cd CP_TEMPLATES
-```
-2. Copy the required template into your contest file.
-3. Compile and run:
- ```bash
-g++ -std=c++17 -O2 main.cpp -o main
-./main
-```
--------------------------------------------------------------------------------------------------------------------------------
-### 🎯 Goal
+## **Directory Structure**
 
-To provide a plug-and-play toolkit for competitive programmers that minimizes setup time and maximizes focus on problem-solving.
+### Binary Search (`Binary_Search/`)
+Core binary search implementations and applications:
+- `bs_implementation.cpp` - Basic binary search algorithm
+- `divisor.cpp` - Finding divisors using binary search
+- `first_last.cpp` - Find first and last occurrence in sorted array
+- `floor_ceil.cpp` - Floor and ceiling in sorted array
+- `low_bound.cpp` - Lower bound implementation
+- `peak_element.cpp` - Finding peak element
+- `rotated_array.cpp` - Rotated array operations
+- `search_rotated_array.cpp` - Search in rotated sorted array
+- `single_element.cpp` - Single element in sorted array
+- `sqrt.cpp` - Integer square root using binary search
+- `upper_bound.cpp` - Upper bound implementation
 
-### 🤝 Contributions
+#### Binary Search on Answer (`Binary_Search/Binary_Search_on_Answer/`)
+Advanced problems using binary search on results:
+- `book_allocation.cpp` - Allocate books to students
+- `k_new_stations.cpp` - Station placement optimization
+- `koko_eating_bananas.cpp` - Eating speed optimization
+- `median_sorted_array.cpp` - Median of two sorted arrays
+- `painters_partition.cpp` - Partition for painters
 
-Feel free to:
-- Add new templates.
-- Improve existing ones.
-- Suggest optimizations.
-<br>
+### **Dynamic Programming** (`dynamic_programming/`)
+- `fibonacci_number.cpp` - Fibonacci sequence implementation
+
+### **Mathematics** (`Mathematics/`)
+- `Divisor.cpp` - Divisor-related problems
+
+### **Sliding Window** (`Sliding_Window/`)
+- `atmost_k.cpp` - Substring with at most K distinct characters
+
+---
+
+##  **Quick Start**
+
+1. **Compile a file:**
+   ```bash
+   g++ -std=c++17 -O2 filename.cpp -o output
+   ```
+
+2. **Run the executable:**
+   ```bash
+   ./output
+   ```
+
+3. Or use the VS Code build task (Ctrl+Shift+B)
+
+---
+
+## **Topics Covered**
+
+- ✅ **Binary Search** - Standard and advanced applications
+- ✅ **Divide & Conquer** - Problem solving strategies
+- ✅ **Dynamic Programming** - Optimization techniques
+- ✅ **Mathematics** - Number theory and utilities
+- ✅ **Sliding Window** - Substring/subarray problems
+
+---
+
+## **How to Use**
+
+1. Navigate to the topic folder of interest
+2. Review the `.cpp` files for different approaches
+3. Study the algorithm logic and complexity
+4. Compile and test with sample inputs
+5. Understand and modify for your use case
+
+---
+
+## **Learning Goals**
+
+- Master fundamental DSA concepts
+- Understand time and space complexity
+- Learn multiple problem-solving approaches
+- Build efficient algorithms for competitive programming
+
+---
+
 <footer>
-<p align="center" color="grey">Made with ❤️ for CP Beginners!</p>
-<p align="center" color="grey">Let's Learn, Teach and Grow!!</p>
+<p align="center">Made for DSA learners!</p>
+<p align="center">Master the fundamentals, solve harder problems!</p>
 </footer>
