@@ -53,6 +53,7 @@ int optimized(vector<int> &dp, vector<int> &coins, int target)
   }
 
   dp[target] = coin_val;
+
   return dp[target];
 }
 
@@ -71,8 +72,11 @@ int main()
   for (int i = 0; i < n; i++)
     cin >> coins[i];
 
-  cout << coins_(n, coins, target) << endl;
-  cout << optimized(dp, coins, target) << endl;
+  // cout << coins_(n, coins, target) << endl;
+  if (optimized(dp, coins, target) != INF)
+    cout << optimized(dp, coins, target) << endl;
+  else
+    cout << -1 << endl;
 
   return 0;
 }
