@@ -73,6 +73,53 @@ private:
     return *min_element(dp[m - 1].begin(), dp[m - 1].end() - 1);
   }
 
+  int space_optimized(vii &tr)
+  {
+
+    int m = tr.size();
+
+    // last row ko store krke rkho.
+    vi dp = tr[m - 1];
+
+    for (int row = m - 2; row >= 0; row--)
+    {
+      for (int col = 0; col <= row; col++)
+      {
+
+        // jo previous row humne store rkhi thi usko update kro, row hmare pass h hi so row wala index ht jayega just.
+        dp[col] = tr[row][col] + min(dp[col], dp[col + 1]);
+      }
+    }
+
+    return dp[0];
+  }
+
+  int input_manipulation(vii &tr)
+  {
+
+    int m = tr.size();
+
+    // agar me observe kru toh hum i se i+1 and col ya i se i+1 and col+1 jaa rhe h.
+    // wahi chiz hum same hi triangle me krde bina dusra triangle bnaye.
+    for (int row = 1; row < m; row++)
+    {
+      for (int col = 0; col <= row; col++)
+      {
+
+        // check if the indexes are in bound or not.
+        // if an index is going <0 after doing col-1 than we will make it 0. -> max(col-1,0);
+        // if it is going beyound length of previous, we keep it as last index of previous row so it remain in bound.
+
+        int col2 = min(col, (int)tr[row - 1].size() - 1);
+        int col1 = max(col - 1, 0);
+
+        tr[row][col] = tr[row][col] + min(tr[row - 1][col1], tr[row - 1][col2]);
+      }
+    }
+
+    return *min_element(tr[m - 1].begin(), tr[m - 1].end());
+  }
+
 public:
   int minimumTotal(vector<vector<int>> &triangle)
   {
@@ -83,7 +130,10 @@ public:
     // return rec(triangle,0,0);
 
     // return memo(dp, triangle, 0, 0);
-    return tabulation(dp, triangle);
+    // return tabulation(dp, triangle);
+
+    // return space_optimized(triangle);
+    return input_manipulation(triangle);
   }
 };
 
